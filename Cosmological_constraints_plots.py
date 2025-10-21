@@ -18,7 +18,7 @@ cosmo_fisher21=np.zeros(169).reshape(13,13)
 cosmo_fisher_kappa=np.zeros(225).reshape(15,15)
 cosmo_fisher_kappa_F1=np.zeros(9).reshape(3,3)
 cosmo_fisher_bispec=np.zeros(169).reshape(13,13)
-Planck_F = np.loadtxt('Planck_detf_fish.dat')
+#Planck_F = np.loadtxt('Planck_detf_fish.dat')
 
 basic_fisher=np.array([])
 full_fisher = np.array([])
@@ -244,3 +244,4 @@ plt.tick_params(axis='both',labelsize=18)
 #plt.xlim([-1.15,-0.85])
 plt.tight_layout()
 plt.show()
+
