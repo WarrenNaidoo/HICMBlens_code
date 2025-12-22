@@ -139,15 +139,15 @@ lbl1 = [ 'omegaDE', 'w0', 'wa', 'h']
 #lbl2 =['n_s', 'w0', 'wa', 'omega_b', 'omegak', 'omegaDE', 'h', 'sigma8']
 lbl2 = ['omega_b','omegaDE','n_s',  'sigma8' , 'h']
 
-# First fix HI Matrix over Abao b1 b2, f, aperp, apar, Om_k, gamma
+# First fix HI Matrix over Abao, sigma8, b1, b2, f, aperp, apar, Om_k, gamma
 cosmo_fisher21 = np.delete(np.delete(cosmo_fisher21,[0, 1, 2, 3, 4, 5,6,7,12],axis=1),[0, 1, 2, 3, 4, 5,6,7,12],axis=0)
-# HI here are sig8  Om_DE, w0, wa, h
+# HI here are Om_DE, w0, wa, h
 
 
 
-# Fix bispectrum over Abao, b1, b2, f,aperp, apar,Om_k, gamma
+# Fix bispectrum over Abao, sigma8, b1, b2, f, aperp, apar, Om_k, gamma
 cosmo_fisher_bispec = np.delete(np.delete(cosmo_fisher_bispec, [0,1, 2,3,4,5,6,7,12], axis=1 ),[0,1,2,3,4,5,6,7,12],axis=0)
-# Bispectrum here are sig8 Om_DE, w0, wa, h
+# Bispectrum here are Om_DE, w0, wa, h
 
 
 # marginalise sigma_8 in kappa
@@ -260,3 +260,4 @@ plt.xlabel(r'$w_0$', fontsize=30)
 plt.ylabel(r'$w_a$', fontsize=30)
 plt.tight_layout()
 plt.show()
+
